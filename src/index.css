@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Oswald", "Impact", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: #111827; /* gray-900 */
+  color: #f3f4f6; /* gray-100 */
+}
+
+input, select {
+  @apply w-full px-4 py-4 bg-gray-800 border-2 border-gray-700 rounded-none focus:outline-none focus:border-[#ff006e] focus:ring-1 focus:ring-[#ff006e] text-white placeholder-gray-500 transition-colors uppercase font-bold tracking-wider;
+}
+
+label {
+  @apply block text-sm font-bold text-gray-400 mb-2 uppercase tracking-widest;
+}
+
+/* Custom scrollbar for edgy look */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff006e;
+}
